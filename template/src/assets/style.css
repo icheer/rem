@@ -1,0 +1,520 @@
+/*淡入淡出*/
+
+.fade-enter-to,
+.fade-leave-to {
+	transition: all 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+	opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave {
+	opacity: 1;
+}
+
+
+/*快速淡入淡出*/
+
+.fade-quickly-enter-to,
+.fade-quickly-leave-to {
+	transition: all 0.2s;
+}
+
+.fade-quickly-enter,
+.fade-quickly-leave-to {
+	opacity: 0;
+}
+
+.fade-quickly-enter-to,
+.fade-quickly-leave {
+	opacity: 1;
+}
+
+
+/*缓慢淡入淡出*/
+
+.fade-slowly-enter-to {
+	transition: all 2s;
+}
+
+.fade-slowly-leave-to {
+	transition: all 0.2s;
+}
+
+.fade-slowly-enter,
+.fade-slowly-leave-to {
+	opacity: 0;
+}
+
+.fade-slowly-enter-to,
+.fade-slowly-leave {
+	opacity: 1;
+}
+
+
+/*延迟0.25秒的淡入淡出*/
+
+.fade25-enter-to,
+.fade25-leave-to {
+	transition: all 0.5s 0.25s;
+}
+
+.fade25-enter,
+.fade25-leave-to {
+	opacity: 0;
+}
+
+.fade25-enter-to,
+.fade25-leave {
+	opacity: 1;
+}
+
+
+/*延迟0.5秒的淡入淡出*/
+
+.fade5-enter-to,
+.fade5-leave-to {
+	transition: all 1s 0.5s;
+}
+
+.fade5-enter,
+.fade5-leave-to {
+	opacity: 0;
+}
+
+.fade5-enter-to,
+.fade5-leave {
+	opacity: 1;
+}
+
+
+/*向上淡出*/
+
+.fade-up-enter-to,
+.fade-up-leave-to {
+	transition: all 0.3s;
+}
+
+.fade-up-enter,
+.fade-up-leave-to {
+	opacity: 0;
+	transform: translateY(-0.3rem)
+}
+
+.fade-up-enter-to,
+.fade-up-leave {
+	opacity: 1;
+}
+
+
+/*延迟0.25秒的向上淡出*/
+
+.fade-up25-enter-to {
+	transition: all 0.5s 0.25s;
+}
+
+.fade-up25-leave-to {
+	transition: all 0.5s;
+}
+
+.fade-up25-enter,
+.fade-up25-leave-to {
+	opacity: 0;
+	transform: translateY(-0.3rem)
+}
+
+.fade-up25-enter-to,
+.fade-up25-leave {
+	opacity: 1;
+}
+
+
+/*向左(从左)滑动*/
+
+.move-left-enter-to,
+.move-left-leave-to {
+	transition: all 0.5s;
+}
+
+.move-left-enter,
+.move-left-leave-to {
+	transform: translateX(-100%);
+}
+
+.move-left-enter-to,
+.move-left-leave {
+	transform: translateX(0);
+}
+
+
+/*向右(从右)滑动*/
+
+.move-right-enter-to,
+.move-right-leave-to {
+	transition: all 0.5s;
+}
+
+.move-right-enter,
+.move-right-leave-to {
+	transform: translateX(100%);
+}
+
+.move-right-enter-to,
+.move-right-leave {
+	transform: translateX(0);
+}
+
+
+/*从右向左滑动enter*/
+
+.enter-from-right-enter-to,
+.enter-from-right-leave-to {
+	transition: all 0.5s;
+}
+
+.enter-from-right-enter {
+	transform: translateX(100%) translateZ(0);
+}
+
+.enter-from-right-enter-to {
+	transform: translateX(0) translateZ(0);
+}
+
+.enter-from-right-leave {
+	transform: translateX(0) translateZ(0);
+}
+
+.enter-from-right-leave-to {
+	transform: translateX(-100%) translateZ(0);
+}
+
+
+/*从左向右滑动enter*/
+
+.enter-from-left-enter-to,
+.enter-from-left-leave-to {
+	transition: all 0.5s;
+}
+
+.enter-from-left-enter {
+	transform: translateX(-100%) translateZ(0);
+}
+
+.enter-from-left-enter-to {
+	transform: translateX(0) translateZ(0);
+}
+
+.enter-from-left-leave {
+	transform: translateX(0) translateZ(0);
+}
+
+.enter-from-left-leave-to {
+	transform: translateX(100%) translateZ(0);
+}
+
+
+/*淡入enter*/
+
+.enter-fade-enter-to,
+.enter-fade-leave-to {
+	transition: all 0.3s;
+}
+
+.enter-fade-enter {
+	opacity: 0;
+}
+
+.enter-fade-enter-to {
+	opacity: 1;
+}
+
+
+/*慢速淡入enter*/
+
+.enter-fade-slowly-enter-to,
+.enter-fade-slowly-leave-to {
+	transition: all 2s 1s;
+}
+
+.enter-fade-slowly-enter {
+	opacity: 0;
+}
+
+.enter-fade-slowly-enter-to {
+	opacity: 1;
+}
+
+
+/*冒泡1enter*/
+
+.pop1-enter-to {
+	animation: pop 0.6s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop1-enter {
+	opacity: 0;
+}
+
+
+/*冒泡2enter*/
+
+.pop2-enter-to {
+	animation: pop 0.6s 0.6s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop2-enter {
+	opacity: 0;
+}
+
+
+/*冒泡3enter*/
+
+.pop3-enter-to {
+	animation: pop 0.6s 1s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop3-enter {
+	opacity: 0;
+}
+
+
+/*冒泡4enter*/
+
+.pop4-enter-to {
+	animation: pop 0.6s 0.2s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop4-enter {
+	opacity: 0;
+}
+
+
+/*冒泡5enter*/
+
+.pop5-enter-to {
+	animation: pop 0.6s 0.8s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop5-enter {
+	opacity: 0;
+}
+
+
+/*冒泡6enter*/
+
+.pop6-enter-to {
+	animation: pop 0.6s 0.4s linear;
+	animation-fill-mode: backwards;
+}
+
+.pop6-enter {
+	opacity: 0;
+}
+
+@keyframes pop {
+	from {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+	70% {
+		opacity: 1;
+		transform: scale(1.1);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	-webkit-touch-callout: none;
+	/*-webkit-user-select: none;*/
+	-webkit-tap-highlight-color: transparent;
+}
+
+.rel {
+	position: relative;
+}
+
+.abs {
+	position: absolute;
+	z-index: 1;
+}
+
+.fixed {
+	position: fixed;
+	z-index: 2;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+.overflow-x-hidden {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.full {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.middle {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center {
+	text-align: center;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.hide {
+	display: none;
+}
+
+.v-middle {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.break {
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.pre-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+
+.bgsz {
+	background-size: 100% 100%;
+}
+
+.gpu {
+	transform: translateZ(0);
+}
+
+.clearfix:after{
+	clear:both;
+	display:block;
+	visibility:hidden;
+	height:0;
+	line-height:0;
+	content:"";
+}
+
+/*.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}*/
+
+.v-cloak {
+	display: none;
+}
+
+.transparent {
+	opacity: 0;
+}
+
+.fadeout {
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+.float-l {
+	float: left;
+}
+
+.mgbt10 {
+	margin-bottom: 0.1rem;
+}
+
+.mgbt20 {
+	margin-bottom: 0.2rem;
+}
+
+.mgbt40 {
+	margin-bottom: 0.4rem;
+}
+
+.mgtp10 {
+	margin-top: 0.1rem;
+}
+
+.mgtp20 {
+	margin-top: 0.2rem;
+}
+
+.mgtp40 {
+	margin-top: 0.4rem;
+}
+
+.round {
+	border-radius: 50%;
+}
+
+.red {
+	color: #e00;
+}
+
+button {
+	outline: none;
+}
+
+
+/* mint-ui */
+
+.mint-loadmore-bottom {
+	font-size: .35rem;
+	text-align: center;
+	color: #ccc;
+	margin: 0 0 .2rem;
+}
+
+.mint-loadmore {
+	overflow: hidden
+}

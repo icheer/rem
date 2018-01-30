@@ -1,0 +1,30 @@
+ftp
+open 10.0.2.98
+Aixin
+Aixin2016
+binary
+prompt off
+mkdir expert
+cd expert
+mkdir ./activity
+mkdir ./activity/wish-list
+cd ./activity/wish-list
+mdelete ./index.html
+mput "D:\Project\FrontEnd\H5\trunk\expert-activity\dist\index.html"
+mdelete ./static/css/*.*
+mdelete ./static/img/*.*
+mdelete ./static/js/*.*
+mkdir ./static
+mkdir ./static/css
+cd ./static/css
+mput "D:\Project\FrontEnd\H5\trunk\expert-activity\dist\static\css\*.*"
+mkdir ../img
+cd ../img
+mput "D:\Project\FrontEnd\H5\trunk\expert-activity\dist\static\img\*.*"
+mkdir ../js
+cd ../js
+mput "D:\Project\FrontEnd\H5\trunk\expert-activity\dist\static\js\*.*"
+cd ..
+mput "D:\Project\FrontEnd\H5\trunk\expert-activity\dist\static\*.*"
+close
+bye

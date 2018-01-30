@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<title>2018，爱你</title>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="x5-orientation" content="portrait">
+		<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+		<script async src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+		<!-- <script src="/expert/php/redirectwechatURL.php"></script> -->
+		<!-- <script class="get-ticket" src="/expert/php/getjsapi_ticket.php"></script> -->
+		<script>
+			// 根据屏幕dpr计算缩放比例,让1个物理像素干1像素的事儿
+			var scale = (1 / window.devicePixelRatio).toFixed(4);
+			document.write('<meta class="meta-viewport" name="viewport" content="width=device-width,initial-scale='+scale+',minimum-scale='+scale+',maximum-scale='+scale+',user-scalable=no" />');
+			var html = document.getElementsByTagName('html')[0];
+			var pageHeight = Math.max(html.getBoundingClientRect().height, window.innerHeight);
+			var pageWidth = Math.max(html.getBoundingClientRect().width, window.innerWidth);
+			var UA=window.navigator.userAgent.toLowerCase();
+			var isPC=false;
+			// if(移动端or屏幕宽高比为竖屏) ==> 取屏幕宽度÷7.5计算font-size
+			if((UA.indexOf('mobile')>-1 || UA.indexOf('android')>-1 || UA.indexOf('ucweb')>-1) && pageWidth/pageHeight<=0.75){
+				html.style.fontSize = pageWidth/7.5 + 'px'
+			} else {
+				// 否则(PC浏览器中) ==> 取屏幕高度计算9/16,再÷7.5计算font-size
+				window.isPC=true;
+				html.style.fontSize = pageHeight*9/16/7.5+'px';
+			}
+			// npm run dev开发过程中,本地用手机测试时,模拟产生openid.
+			if(window.location.origin.indexOf('http://10.')>-1){
+				window.localStorage.setItem('openid','ota9zxLqLKZveCCmaZdOJZFUYRxY');
+			}
+			//插入调试用的控制台(第三方工具eruda),当url中带有?test=xxx时,手机端访问网页可以通过小齿轮查看控制台
+			;(function () {
+				var src = '//cdn.bootcss.com/eruda/1.2.4/eruda.min.js';
+				if (!/test/.test(window.location)) return;
+				document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+				document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+			})();
+		</script>
+		<!-- <script>
+			// 分享相关
+			var head=document.getElementsByTagName('head')[0];
+			function getTicket(){
+				var s=head.getElementsByClassName('get-ticket');
+				if(s && s.length){
+					head.removeChild(s[0]);
+				}
+				var script=document.createElement('script');
+				script.setAttribute('class','get-ticket');
+				script.setAttribute('src','/expert/php/getjsapi_ticket.php');
+				head.appendChild(script);
+			}
+			function getNewTicket(){
+				var valid=false;
+				if(window.jsapi_ticket){
+					var myTime = new Date().getTime();
+					var serverTime = myTime - window.jsapi_timeDiff;
+					if(serverTime-window.jsapi_createTime>7200000){
+						valid=false;
+					} else {
+						valid=true;
+					}
+				}
+				if(valid==false){
+					window.getTicket();
+				}
+				return valid;
+			}
+			!function shareDeny(){
+				//禁止分享配置
+				wx.config({
+					debug: false,
+					appId: 'wx0cad77c43b1d74ce',
+					timestamp: 123123213,
+					nonceStr: '123123123',
+					signature: '123123123',
+					jsApiList: [
+						'hideOptionMenu',
+					]
+				});
+				wx.ready(function() {
+					wx.checkJsApi({
+						jsApiList: [
+							'hideOptionMenu',
+						]
+					});
+					wx.hideOptionMenu();
+				});
+			}();
+		</script> -->
+		<style>
+			.pc {
+				position: relative;
+				height: 100%;
+				margin: 0 auto;
+			}
+			.abs {
+				position: absolute;
+				z-index: 1;
+			}
+			.rel {
+				position: relative;
+			}
+			.full {
+				width: 100%;
+				height: 100%;
+			}
+			.overflow-hidden {
+				overflow: hidden;
+			}
+			.overflow-x-hidden {
+				overflow-x: hidden;
+				overflow-y: auto;
+			}
+			.break {
+				word-break: break-all;
+				word-wrap: break-word;
+			}
+			html,body{
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background: #fff;
+			}
+			body {
+				font-size: 0.5rem;
+			}
+			#webapp_container {
+				height: 100%;
+			}
+			.swiper-pagination .swiper-pagination-bullet {
+				background-color: transparent;
+				border: 0.02rem solid #fff;
+				opacity: 1;
+				width: 0.15rem;
+				height: 0.15rem;
+				margin: 0 0.2rem;
+			}
+			span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+				background: #fff;
+				border: 0.04rem solid rgba(255,255,255,0.2);
+			}
+			.swiper-button-prev, .swiper-button-next{
+				margin-top: -0.5rem !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="webapp_container">
+			<div id="app"></div>
+			<!-- built files will be auto injected -->
+		</div>
+		<script>
+			window.onload=function(){
+				!function(){
+					if(window.isPC){
+						var webapp=document.getElementById('webapp_container');
+						webapp.className="pc";
+						var width=window.pageHeight*9/16+'px';
+						webapp.style.width=width;
+					}
+				}();
+			}
+		</script>
+	</body>
+</html>
